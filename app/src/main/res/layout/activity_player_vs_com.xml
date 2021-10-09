@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.player.PlayerVsCom">
+
+    <ImageView
+        android:id="@+id/logo_tittle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tittle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/logo_title" />
+
+    <TextView
+        android:id="@+id/tv_title_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:text="@string/name_player"
+        android:textSize="@dimen/_16sdp"
+        android:textStyle="bold"
+        android:textColor="#03A9F4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_tittle"
+        android:contentDescription="@string/tittle_player" />
+
+
+    <ImageView
+        android:id="@+id/iv_vs"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginTop="124dp"
+        android:contentDescription="@string/iv_vs"
+        android:src="@drawable/vs"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo_tittle" />
+
+    <ImageView
+        android:id="@+id/iv_reset"
+        android:layout_width="@dimen/_42sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:contentDescription="@string/iv_reset"
+        android:src="@drawable/refresh"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@id/ll_paper_com"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_paper_com" />
+
+
+    <!--    player-->
+    <LinearLayout
+        android:id="@+id/ll_rock_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_player">
+
+        <ImageView
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/rock"
+            android:contentDescription="@string/iv_paper" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_scissors_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_rock_player">
+
+
+        <ImageView
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/scissors"
+            android:contentDescription="@string/iv_scissors" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_paper_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_scissors_player">
+
+        <ImageView
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/paper"
+            android:contentDescription="@string/iv_paper" />
+    </LinearLayout>
+
+    <!--    com-->
+
+    <TextView
+        android:id="@+id/iv_title_com"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/_26sdp"
+        android:text="@string/com"
+        android:textSize="@dimen/_16sdp"
+        android:textStyle="bold"
+        android:textColor="#03A9F4"
+        android:src="@drawable/com"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_tittle"
+        android:contentDescription="@string/iv_title_computer" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_rock_com"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:orientation="vertical"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_title_com">
+
+        <ImageView
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/rock"
+            android:contentDescription="@string/iv_paper" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_scissors_com"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:orientation="vertical"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_rock_com">
+
+
+        <ImageView
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/scissors"
+            android:contentDescription="@string/iv_scissors" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_paper_com"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:orientation="vertical"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_scissors_com">
+
+        <ImageView
+            android:id="@+id/paper_com"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/paper"
+            android:contentDescription="@string/iv_paper" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

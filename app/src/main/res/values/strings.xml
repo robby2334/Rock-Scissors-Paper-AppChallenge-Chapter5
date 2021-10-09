@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Rock-Scissors-Paper-AppChallenge-Chapter5</string>
+    <string name="logo_title">logo title</string>
+    <string name="tittle_player">tittle player</string>
+    <string name="iv_vs">iv vs</string>
+    <string name="iv_info">iv info</string>
+    <string name="iv_title_computer">iv title computer</string>
+    <string name="iv_reset">iv reset</string>
+    <string name="iv_rock">iv rock</string>
+    <string name="iv_scissors">iv scissors</string>
+    <string name="iv_paper">iv paper</string>
+    <string name="iv_com_choice">iv com choice</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="previous_page_intro">Previous</string>
+    <string name="next_page_intro">Next</string>
+    <string name="text_error_field">Task Title must be Filled !</string>
+    <string name="back_to_home">back to home view</string>
+    <string name="text_error_input_name">Please Input Your Name</string>
+    <string name="text_name_player_vs_player">%s vs player</string>
+    <string name="text_name_player_vs_computer">%s vs computer</string>
+    <string name="text_title">Hello %s ! choose your enemy</string>
+    <string name="text_title_player">%s</string>
+    <string name="choice_enemy">Choice Enemy</string>
+    <string name="name_vs_user">Name vs User</string>
+    <string name="name_vs_computer">Name vs Computer</string>
+    <string name="name_player">name player</string>
+    <string name="com">COM</string>
+
+</resources>
