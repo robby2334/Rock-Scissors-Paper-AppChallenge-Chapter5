@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import android.widget.LinearLayout
 import com.robbie.rock_scissors_paper_appchallenge_chapter5.R
 import com.robbie.rock_scissors_paper_appchallenge_chapter5.databinding.ActivityPlayerVsPlayerBinding
@@ -32,39 +31,39 @@ class PlayerVsPlayer : AppCompatActivity() {
     }
 
     private fun initListenersPlayer() {
-
-        elementPlayer1 =
-            arrayListOf(binding.llRockPlayer1, binding.llScissorsPlayer1, binding.llPaperPlayer1)
-        elementPlayer2 =
-            arrayListOf(binding.llRockPlayer2, binding.llScissorsPlayer2, binding.llPaperPlayer2)
-
+        elementPlayer1 = arrayListOf(
+            binding.llRockPlayer1,
+            binding.llScissorsPlayer1,
+            binding.llPaperPlayer1)
         elementPlayer1.forEachIndexed { index, linearLayout ->
             linearLayout.setOnClickListener { elem ->
                 player1 = index
                 elementPlayer1.forEach {
-                    if (elem != it) {
+                    if (elem != it){
                         Helper.defSetBg(it)
                     }
                 }
-
-
             }
-
         }
+
+
+        elementPlayer2 = arrayListOf(
+            binding.llRockPlayer2,
+            binding.llScissorsPlayer2,
+            binding.llPaperPlayer2)
         elementPlayer2.forEachIndexed { index, linearLayout ->
             linearLayout.setOnClickListener { elem ->
-                Helper.setBg(elem)
                 player2 = index
                 elementPlayer2.forEach {
-                    if (elem != it) {
+
+                    if (elem != it){
                         Helper.defSetBg(it)
                     }
                 }
                 resultPlayerVsPlayer()
+
             }
-
         }
-
 
     }
 
@@ -83,23 +82,26 @@ class PlayerVsPlayer : AppCompatActivity() {
 
 
     private fun resultPlayerVsPlayer() {
+
         when {
             (player1 + 1) % 3 == player2 -> {
+                Helper.setBg(elementPlayer1[player1])
+                Helper.setBg(elementPlayer2[player2])
                 Helper.showToast(this, "Player 1 Wins")
                 Helper.showDialog(this, R.drawable.p1win, "close")
-
             }
             player1 == player2 -> {
+                Helper.setBg(elementPlayer1[player1])
+                Helper.setBg(elementPlayer2[player2])
                 Helper.showToast(this, "Draw")
                 Helper.showDialog(this, R.drawable.draw, "close")
             }
             else -> {
+                Helper.setBg(elementPlayer1[player1])
+                Helper.setBg(elementPlayer2[player2])
                 Helper.showToast(this, "Player 2 Wins")
                 Helper.showDialog(this, R.drawable.p2win, "close")
             }
-
-
-
 
         }
         distClick()
@@ -127,8 +129,6 @@ class PlayerVsPlayer : AppCompatActivity() {
             }
         }
     }
-
-
 
     private fun resetGame() {
         initListenersPlayer()

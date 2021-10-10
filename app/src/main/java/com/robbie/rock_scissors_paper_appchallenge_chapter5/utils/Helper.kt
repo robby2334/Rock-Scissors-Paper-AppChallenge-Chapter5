@@ -17,11 +17,11 @@ object Helper {
     }
 
     fun setBg(linearLayout: View){
-        linearLayout.setBackgroundColor(R.drawable.select)
+        linearLayout.setBackgroundResource(R.drawable.select)
 
     }
      fun defSetBg(linearLayout: LinearLayout) {
-        linearLayout.setBackgroundResource(R.drawable.defsetbg)
+        linearLayout.setBackgroundResource(R.drawable.def_set_bg)
     }
 
     fun showDialog(context: Context,Img : Int, close: String){
