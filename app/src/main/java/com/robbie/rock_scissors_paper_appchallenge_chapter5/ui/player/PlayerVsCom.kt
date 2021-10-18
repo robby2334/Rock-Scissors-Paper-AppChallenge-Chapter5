@@ -50,6 +50,7 @@ open class PlayerVsCom : AppCompatActivity(), Game {
         elementPlayer.forEachIndexed { index, linearLayout ->
             linearLayout.setOnClickListener { elem ->
                 Helper.setBg(elem)
+                scaleIvPlayer(elem)
                 player = index
                 elementPlayer.forEach {
                     if (elem != it) {
@@ -69,6 +70,7 @@ open class PlayerVsCom : AppCompatActivity(), Game {
 
     override fun resultPlayerVsCom() {
         val computerChoice = (0..2).random()
+        scaleIvCom(elementCom[computerChoice])
         Helper.setBg(elementCom[computerChoice])
         when {
             (player + 1) % 3 == computerChoice -> {
@@ -129,15 +131,112 @@ open class PlayerVsCom : AppCompatActivity(), Game {
         player = 0
         elementPlayer.forEach {
             Helper.defSetBg(it)
+            resetChoicePlayer()
             it.isClickable = true
         }
 
         elementCom.forEach {
             Helper.defSetBg(it)
+            resetChoiceCom()
 
         }
 
     }
+
+    private fun scaleIvPlayer(args: Any) {
+        when {
+            args === binding.llRockPlayer-> {
+                binding.llRockPlayer.scaleX = "0.85".toFloat()
+                binding.llRockPlayer.scaleY = "0.85".toFloat()
+
+                // Button PAPER and ROCK scale reset
+                binding.llPaperPlayer.scaleX = "1.2".toFloat()
+                binding.llPaperPlayer.scaleY = "1.2".toFloat()
+                binding.llScissorsPlayer.scaleX = "1.2".toFloat()
+                binding.llScissorsPlayer.scaleY = "1.2".toFloat()
+
+            }
+            args === binding.llPaperPlayer -> {
+                binding.llPaperPlayer.scaleX = "0.85".toFloat()
+                binding.llPaperPlayer.scaleY = "0.85".toFloat()
+
+                // Button ROCK and SCISSORS scale reset
+                binding.llRockPlayer.scaleX = "1.2".toFloat()
+                binding.llRockPlayer.scaleY = "1.2".toFloat()
+                binding.llScissorsPlayer.scaleX = "1.2".toFloat()
+                binding.llScissorsPlayer.scaleY = "1.2".toFloat()
+
+            }
+            args === binding.llScissorsPlayer -> {
+                binding.llScissorsPlayer.scaleX = "0.85".toFloat()
+                binding.llScissorsPlayer.scaleY = "0.85".toFloat()
+
+                // Button ROCK and PAPER scale reset
+                binding.llRockPlayer.scaleX = "1.2".toFloat()
+                binding.llRockPlayer.scaleY = "1.2".toFloat()
+                binding.llPaperPlayer.scaleX = "1.2".toFloat()
+                binding.llPaperPlayer.scaleY = "1.2".toFloat()
+            }
+            else -> resetChoicePlayer()
+        }
+    }
+
+    private fun resetChoicePlayer() {
+        binding.llRockPlayer.scaleX = "1.2".toFloat()
+        binding.llRockPlayer.scaleY = "1.2".toFloat()
+        binding.llPaperPlayer.scaleX = "1.2".toFloat()
+        binding.llPaperPlayer.scaleY = "1.2".toFloat()
+        binding.llScissorsPlayer.scaleX = "1.2".toFloat()
+        binding.llScissorsPlayer.scaleY = "1.2".toFloat()
+    }
+
+    private fun scaleIvCom(args: Any) {
+        when {
+            args === binding.llRockCom -> {
+                binding.llRockCom.scaleX = "0.85".toFloat()
+                binding.llRockCom.scaleY = "0.85".toFloat()
+
+                // Button PAPER and ROCK scale reset
+                binding.llPaperCom.scaleX = "1.2".toFloat()
+                binding.llPaperCom.scaleY = "1.2".toFloat()
+                binding.llScissorsCom.scaleX = "1.2".toFloat()
+                binding.llScissorsCom.scaleY = "1.2".toFloat()
+
+            }
+            args === binding.llPaperCom -> {
+                binding.llPaperCom.scaleX = "0.85".toFloat()
+                binding.llPaperCom.scaleY = "0.85".toFloat()
+
+                // Button ROCK and SCISSORS scale reset
+                binding.llRockCom.scaleX = "1.2".toFloat()
+                binding.llRockCom.scaleY = "1.2".toFloat()
+                binding.llScissorsCom.scaleX = "1.2".toFloat()
+                binding.llScissorsCom.scaleY = "1.2".toFloat()
+
+            }
+            args === binding.llScissorsCom -> {
+                binding.llScissorsCom.scaleX = "0.85".toFloat()
+                binding.llScissorsCom.scaleY = "0.85".toFloat()
+
+                // Button ROCK and PAPER scale reset
+                binding.llRockCom.scaleX = "1.2".toFloat()
+                binding.llRockCom.scaleY = "1.2".toFloat()
+                binding.llPaperCom.scaleX = "1.2".toFloat()
+                binding.llPaperCom.scaleY = "1.2".toFloat()
+            }
+            else -> resetChoiceCom()
+        }
+    }
+
+    private fun resetChoiceCom() {
+        binding.llRockCom.scaleX = "1.2".toFloat()
+        binding.llRockCom.scaleY = "1.2".toFloat()
+        binding.llPaperCom.scaleX = "1.2".toFloat()
+        binding.llPaperCom.scaleY = "1.2".toFloat()
+        binding.llScissorsCom.scaleX = "1.2".toFloat()
+        binding.llScissorsCom.scaleY = "1.2".toFloat()
+    }
+
 
 
 }

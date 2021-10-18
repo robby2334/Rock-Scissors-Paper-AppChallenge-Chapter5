@@ -25,5 +25,6 @@
     <string name="name_vs_computer">Name vs Computer</string>
     <string name="name_player">name player</string>
     <string name="com">COM</string>
+    <string name="title_com">computer</string>
 
 </resources>
