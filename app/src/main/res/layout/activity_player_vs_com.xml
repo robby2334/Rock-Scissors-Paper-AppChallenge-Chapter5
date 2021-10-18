@@ -21,7 +21,7 @@
         android:id="@+id/tv_title_player"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_16sdp"
         android:text="@string/name_player"
         android:textSize="@dimen/_16sdp"
         android:textStyle="bold"
@@ -60,6 +60,7 @@
         android:id="@+id/ll_rock_player"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/def_set_bg"
         android:layout_marginStart="@dimen/_16sdp"
         android:layout_marginTop="@dimen/_16sdp"
         android:orientation="vertical"
@@ -77,6 +78,7 @@
         android:id="@+id/ll_scissors_player"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/def_set_bg"
         android:layout_marginStart="@dimen/_16sdp"
         android:layout_marginTop="@dimen/_16sdp"
         android:orientation="vertical"
@@ -95,6 +97,7 @@
         android:id="@+id/ll_paper_player"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/def_set_bg"
         android:layout_marginStart="@dimen/_16sdp"
         android:layout_marginTop="@dimen/_16sdp"
         android:orientation="vertical"
@@ -110,30 +113,31 @@
 
     <!--    com-->
 
+
     <TextView
-        android:id="@+id/iv_title_com"
+        android:id="@+id/tv_title_com"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingRight="@dimen/_26sdp"
+        android:layout_marginEnd="@dimen/_26sdp"
         android:text="@string/com"
         android:textSize="@dimen/_16sdp"
         android:textStyle="bold"
         android:textColor="#03A9F4"
-        android:src="@drawable/com"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo_tittle"
-        android:contentDescription="@string/iv_title_computer" />
+        android:contentDescription="@string/title_com" />
 
 
     <LinearLayout
         android:id="@+id/ll_rock_com"
         android:layout_width="wrap_content"
+        android:background="@drawable/def_set_bg"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/_16sdp"
         android:layout_marginTop="@dimen/_16sdp"
         android:orientation="vertical"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_title_com">
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_com">
 
         <ImageView
             android:layout_width="@dimen/_50sdp"
@@ -145,6 +149,7 @@
     <LinearLayout
         android:id="@+id/ll_scissors_com"
         android:layout_width="wrap_content"
+        android:background="@drawable/def_set_bg"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/_16sdp"
         android:layout_marginTop="@dimen/_16sdp"
@@ -165,6 +170,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/_16sdp"
+        android:background="@drawable/def_set_bg"
         android:layout_marginTop="@dimen/_16sdp"
         android:orientation="vertical"
         app:layout_constraintRight_toRightOf="parent"
