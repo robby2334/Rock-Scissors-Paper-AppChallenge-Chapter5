@@ -43,6 +43,17 @@
     <!--    player-->
 
     <ImageView
+        android:id="@+id/iv_start_fighter"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:contentDescription="@string/iv_vs"
+        android:src="@drawable/start"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_vs" />
+
+    <ImageView
         android:id="@+id/iv_reset"
         android:layout_width="@dimen/_50sdp"
         android:layout_height="@dimen/_50sdp"
